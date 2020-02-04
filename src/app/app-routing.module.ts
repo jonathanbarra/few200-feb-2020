@@ -3,8 +3,13 @@ import { TipCalculatorComponent } from "./component/tip-calculator/tip-calculato
 import { DashboardComponent } from "./component/dashboard/dashboard.component";
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
+import { CounterComponent } from "./component/counter/counter.component";
 
 const routes: Routes = [
+  {
+    path: "counter",
+    component: CounterComponent
+  },
   {
     path: "dashboard",
     component: DashboardComponent

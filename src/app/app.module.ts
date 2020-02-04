@@ -1,3 +1,4 @@
+import { CounterEffects } from "./effects/counter.effects";
 import { TodoService } from "./component/communications/todo.service";
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
@@ -10,6 +11,11 @@ import { NavComponent } from "./component/nav/nav.component";
 import { CommunicationsComponent } from "./component/communications/communications.component";
 import { TodoEntryComponent } from "./component/communications/todo-entry/todo-entry.component";
 import { TodoListComponent } from "./component/communications/todo-list/todo-list.component";
+import { CounterComponent } from "./component/counter/counter.component";
+import { StoreModule } from "@ngrx/store";
+import { reducers } from "./reducers";
+import { StoreDevtoolsModule } from "@ngrx/store-devtools";
+import { EffectsModule } from "@ngrx/effects";
 
 @NgModule({
   declarations: [
@@ -19,9 +25,16 @@ import { TodoListComponent } from "./component/communications/todo-list/todo-lis
     NavComponent,
     CommunicationsComponent,
     TodoEntryComponent,
-    TodoListComponent
+    TodoListComponent,
+    CounterComponent
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    StoreModule.forRoot(reducers),
+    StoreDevtoolsModule.instrument(),
+    EffectsModule.forRoot([CounterEffects])
+  ],
   providers: [TodoService],
   bootstrap: [AppComponent]
 })
