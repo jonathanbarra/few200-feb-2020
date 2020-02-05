@@ -1,3 +1,4 @@
+import { ShoppingComponent } from "./features/shopping.component";
 import { CommunicationsComponent } from "./component/communications/communications.component";
 import { TipCalculatorComponent } from "./component/tip-calculator/tip-calculator.component";
 import { DashboardComponent } from "./component/dashboard/dashboard.component";
@@ -6,6 +7,10 @@ import { Routes, RouterModule } from "@angular/router";
 import { CounterComponent } from "./component/counter/counter.component";
 
 const routes: Routes = [
+  {
+    path: "shopping",
+    component: ShoppingComponent
+  },
   {
     path: "counter",
     component: CounterComponent
