@@ -1,0 +1,35 @@
+<div class="form-group">
+  <label for="item">Book to add:</label>
+  <div>
+    <span>Title:<input class="form-control"
+             name="item.title"
+             #item /></span>
+    <span>Author:<input class="form-control"
+             name="item.author"
+             #item /></span>
+
+
+    <span>
+      <div>
+        <label for="item.format">Format:</label>
+      </div>
+      <div>
+        <select name="pets"
+                id="pet-select">
+          <option value="">Please select the format of your book</option>
+          <option value="Hardcopy">Dogs are dependable like hardcopy</option>
+          <option value="Paperback">Cats are flimsy like paperbacks</option>
+          <option value="E-Book">Hamsters can disappear like Jeff's Spotify playlists</option>
+        </select>
+      </div>
+    </span>
+
+    <div>
+      <input type="button"
+             class="btn btn-primary"
+             value="Add Item"
+             (click)="addItem(item)" />
+    </div>
+
+  </div>
+</div>

@@ -1,7 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Store } from '@ngrx/store';
-import { ShoppingState } from '../../shopping/reducers';
-import { shoppingItemAdded } from '../../shopping/actions/list.actions';
 
 @Component({
   selector: 'app-entry',
@@ -10,14 +7,14 @@ import { shoppingItemAdded } from '../../shopping/actions/list.actions';
 })
 export class EntryComponent implements OnInit {
 
-  constructor(private store: Store<ShoppingState>) { }
+  constructor() { }
 
   ngOnInit() { }
 
   addItem(descriptionEl: HTMLInputElement) {
     // todo : dispatch an action
     const description = descriptionEl.value;
-    this.store.dispatch(shoppingItemAdded({ description }));
+    // this.store.dispatch(shoppingItemAdded({ description }));
     descriptionEl.value = '';
     descriptionEl.focus();
   }

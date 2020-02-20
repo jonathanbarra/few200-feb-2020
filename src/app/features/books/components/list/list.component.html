@@ -1,0 +1,13 @@
+<ul class="list-unstyled">
+  <li class="alert alert-info"
+      *ngFor="let item of list">
+    <span>{{item.title}}</span>
+    <span>{{item.author}}</span>
+    <span>{{item.format}}</span>
+  </li>
+</ul>
+<h1>In a perfect world, you would actually read books, and maybe even own one or two!</h1>
+<!-- <div class="alert alert-info"
+     *ngIf="list.length === 0">
+  <h3>You don't have any books? Really? Add some already!</h3>
+</div> -->

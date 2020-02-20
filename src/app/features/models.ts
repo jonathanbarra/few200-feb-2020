@@ -5,3 +5,10 @@ export interface ShoppingItemModel {
   isTemporary: boolean;
 
 }
+
+export interface BookItemModel {
+  title: string;
+  author: string;
+  format: string;
+
+}

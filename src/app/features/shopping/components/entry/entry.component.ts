@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { ShoppingState } from '../../shopping/reducers';
-import { shoppingItemAdded } from '../../shopping/actions/list.actions';
+import { ShoppingState } from '../../reducers';
+import { shoppingItemAdded } from '../../actions/list.actions';
+
 
 @Component({
   selector: 'app-entry',

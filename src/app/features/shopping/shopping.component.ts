@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { ShoppingItemModel } from './models';
 import { Store } from '@ngrx/store';
+import { ShoppingItemModel } from '../models';
 import { ShoppingState, selectShoppingItemModel } from './reducers';
 
 @Component({

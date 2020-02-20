@@ -1,6 +1,6 @@
 import * as fromList from './list.reducer';
 import { createFeatureSelector, createSelector } from '@ngrx/store';
-import { ShoppingItemModel } from '../models';
+import { ShoppingItemModel } from '../../models';
 
 export const featureName = 'shoppingFeature';
 
